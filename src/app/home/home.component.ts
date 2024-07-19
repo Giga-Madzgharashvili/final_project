@@ -1,6 +1,7 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked,  AfterViewInit,  Component, DoCheck, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-home',
@@ -12,8 +13,12 @@ import { CommonModule } from '@angular/common';
 export class HomeComponent{
   
 
-  constructor() {
+  constructor(private _router: Router) {
    
+  }
+
+  getToProducts(){
+    this._router.navigate(["/products"])
   }
 
 
